@@ -1,0 +1,31 @@
+Plethora Team:
+
+Attached is my solution to the Plethora Technical Exercise. Compiling
+the code requires the jsoncpp-master library for parsing the json profile
+files, which is found here:
+
+github.com/open-source-parsers/jsoncpp
+
+To compile the code at the command line, perform there steps
+
+g++ -c Vertex.cpp
+g++ -c Edge.cpp
+g++ -c -I/home/janedoe/json/jsoncpp-master/include main.cpp
+g++ -o main main.o /home/janedoe/json/jsoncpp-master/build/debug/lib/libjsoncpp.a ./Vertex.o ./Edge.o
+
+where /home/janedoe... is replaced with the proper path. Once compiled,
+the executable is "main", and the program is executed by typing, e.g.,
+"main Rectangle.json".
+
+If more time were available, I would focus on the following:
+- code testing with more complex profiles
+- add robustness to the code to fail gracefully when appropriate
+
+If questions arise, please contact me.
+
+Mike Singer
+msinger2006@gmail.com
+August 2016
+(c) 2016 MASinger
+
+
